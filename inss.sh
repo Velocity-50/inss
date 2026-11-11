@@ -22,7 +22,7 @@ if dd if="$src" of="$dst" bs=4M status=progress conv=fsync; then
     sync
     echo "Devices flashed succesfully!"
 else
-    echo "dd failed with exit code $?." >&2
+    echo "ERROR: dd failed with exit code $?." >&2
     exit 1
 fi
 
